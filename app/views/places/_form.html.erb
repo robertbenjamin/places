@@ -1,0 +1,14 @@
+<%= form_for(@place) do |f| %>
+
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :note %>
+  <%= f.text_field :note %>
+
+  <%= f.submit %>
+
+<% end %>
