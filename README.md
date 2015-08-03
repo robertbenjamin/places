@@ -4,9 +4,9 @@ A Ruby on Rails app!
 
 ## Mockups
 
-![The locations picker.](http://i.imgur.com/vXCe4ks.png)
+![The locations picker.](http://i.imgur.com/gO8nzsp.png)
 
-![The personal locations directory.](http://i.imgur.com/PZNbGDK.jpg)
+![The personal locations directory.](http://i.imgur.com/d44JMaN.jpg)
 
 ## User Stories
 
