@@ -1,0 +1,12 @@
+<h3>Places</h3>
+<ul>
+  <% @places.each do |place| %>
+    <!-- build the list element for each song -->
+    <li>
+      <a href="/places/<%= place.id %>">
+        <%= place.location %> (<%= place.note %>)
+      </a>
+    </li>
+
+  <% end %>
+</ul>
