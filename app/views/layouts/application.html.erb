@@ -12,12 +12,14 @@
 <nav>
   <% if session[:user] %>
     <a href="/sign_out"><%= session[:user]["username"] %>: Sign Out</a></h2>
+    <%= link_to "Add Place", new_user_place_path(session[:user]["id"]) %>
   <% else %>
     <a href="/sign_up">Sign Up</a>
     <a href="/sign_in">Sign In</a>
   <% end %>
   <!-- <a href="/places">Find Places</a> -->
-  <a href="/user/:id/places">My Places</a>
+  <a href="/">Home</a>
+  
 </nav>
 
 <h2><%= flash[:notice] %>

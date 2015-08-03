@@ -70,3 +70,26 @@ body {
 body > * {
 	padding: 10px;
 }
+
+main {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.child {
+	width: 400px;
+	height: 320px;
+	padding: 20px;
+	margin: auto;
+	/*background-color: red;*/
+}
+
+h3 {
+	margin: auto;
+	text-align: center;
+}
+
+.preview_img {
+	max-width: 400px;
+}

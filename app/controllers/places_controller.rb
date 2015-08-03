@@ -14,7 +14,7 @@ class PlacesController < ApplicationController
   def create
     @user = User.find(session[:user]["id"])
     @place = Place.create!(place_params)
-    redirect_to place_path(@place)
+    redirect_to places_path()
   end
 
   #show

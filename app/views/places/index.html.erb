@@ -1,12 +1,14 @@
-<h3>Places</h3>
-<ul>
+<h2>Places</h2>
+<main>
   <% @places.each do |place| %>
-    <!-- build the list element for each song -->
-    <li>
+    <!-- build the list element for each place -->
+    <div class="child">
       <a href="/places/<%= place.id %>">
-        <%= place.location %> (<%= place.note %>)
+				<h3><%= place.location %></h3>
       </a>
-    </li>
+        <%= image_tag(place.photo_url, class: "preview_img") %>
+        <p><%= place.note %></p>
+    </div>
 
   <% end %>
-</ul>
+</main>

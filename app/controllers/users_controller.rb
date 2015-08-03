@@ -32,13 +32,13 @@ class UsersController < ApplicationController
     else
       message = "Welcome, #{@user.username}! "
         cookies[:username] = {
-          value: @user.username,
-          expires: 100.years.from_now
+          value: @user.username
+          # expires: 100.years.from_now
         }
         session[:user] = @user
     end
     flash[:notice] = message
-    redirect_to action: :sign_in
+    redirect_to root_url
   end
 
   def sign_out
