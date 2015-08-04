@@ -10,19 +10,21 @@
 <body>
 
 <nav>
-  <% if session[:user] %>
-    <a href="/sign_out"><%= session[:user]["username"] %>: Sign Out</a></h2>
-    <%= link_to "Add Place", new_user_place_path(session[:user]["id"]) %>
-  <% else %>
-    <a href="/sign_up">Sign Up</a>
-    <a href="/sign_in">Sign In</a>
-  <% end %>
-  <!-- <a href="/places">Find Places</a> -->
   <a href="/">Home</a>
+  <div class="login-info">
+  <% if current_user %>
+    Logged in as <%= current_user.username.capitalize %> : 
+    <%= link_to "Log Out", logout_path %>
+  <% else %>
+    <%= link_to "Sign Up", signup_path %> or
+    <%= link_to "Log In", login_path %>
+   <% end %>
+   <div>
+  <!-- <a href="/places">Find Places</a> -->
   
 </nav>
 
-<h2><%= flash[:notice] %>
+<div class="notice"><%= flash[:notice] %></div>
 
 <%= yield %>
 

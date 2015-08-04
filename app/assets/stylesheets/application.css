@@ -71,6 +71,10 @@ body > * {
 	padding: 10px;
 }
 
+.login-info {
+	float: right;
+}
+
 main {
 	display: inline-flex;
 	flex-wrap: wrap;

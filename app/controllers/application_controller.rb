@@ -7,7 +7,12 @@ class ApplicationController < ActionController::Base
   private
   def authenticate
     if !session[:user]
-      redirect_to "/sign_in"
+      redirect_to login_url
     end
   end
+
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :current_user
 end
