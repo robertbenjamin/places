@@ -13,8 +13,8 @@ class PlacesController < ApplicationController
 
   # create
   def create
-    @user = User.find(session[:user]["id"])
-    @place = Place.create!(place_params)
+    @user = current_user
+    @place = @user.places.create!(place_params)
     redirect_to user_places_path
   end
 
@@ -45,6 +45,6 @@ class PlacesController < ApplicationController
 
   private
   def place_params
-    params.require(:place).permit(:author, :title, :text, :date)
+    params.require(:place).permit(:location, :photo_url, :note)
   end
 end
