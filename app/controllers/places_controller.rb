@@ -2,8 +2,8 @@ class PlacesController < ApplicationController
 	
   # index
   def index
-    @user = User.find(session[:user]["id"])
-    @places = User.find(session[:user]["id"]).places.reverse
+    @user = current_user
+    @places = @user.places.reverse
   end
 
   # new
@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
   def create
     @user = User.find(session[:user]["id"])
     @place = Place.create!(place_params)
-    redirect_to place_path(@place)
+    redirect_to user_places_path
   end
 
   #show

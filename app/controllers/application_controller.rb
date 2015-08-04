@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
   def authenticate
-    if !session[:user]
+    unless session[:user]
       redirect_to login_url
     end
   end

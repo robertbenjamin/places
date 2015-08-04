@@ -3,7 +3,7 @@
   <% @places.each do |place| %>
     <!-- build the list element for each place -->
     <div class="child">
-      <a href=<%= @user %>"/places/<%= place.id %>">
+      <a href=<%= current_user %>"/places/<%= place.id %>">
 				<h3><%= place.location %></h3>
       </a>
         <%= image_tag(place.photo_url, class: "preview_img") %>
