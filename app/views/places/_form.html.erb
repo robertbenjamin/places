@@ -3,6 +3,18 @@
   <%= f.label :location %>
   <%= f.text_field :location %>
 
+  <button type="button" class="img_button">Find Images!</button>
+
+<% suckr = ImageSuckr::GoogleSuckr.new %>
+
+
+<div class="img_picker">
+	<option data-img-src="<%= suckr.get_image_url({"q" => "Paris", "imgsz" => "large", "as_sitesearch" => "flickr.com"}) %>" value="1" class="picked_img">Picture 1</option>
+	<option data-img-src="<%= suckr.get_image_url({"q" => "Paris", "imgsz" => "large", "as_sitesearch" => "instagram.com"}) %>" value="2" class="picked_img">Picture 2</option>
+	<option data-img-src="<%= suckr.get_image_url({"q" => "Paris", "imgsz" => "large", "as_sitesearch" => "shutterfly.com"}) %>" value="3" class="picked_img">Picture 3</option>
+</div>
+	
+
   <%= f.label :photo_url %>
   <%= f.text_field :photo_url %>
 
@@ -12,3 +24,15 @@
   <%= f.submit %>
 
 <% end %>
+
+<script>
+$(".img_picker").imagepicker({
+    show_label  : false
+});
+
+
+
+$(".img_button").click(function () {
+	alert( $('.img_picker').val() );	
+})
+</script>
