@@ -14,14 +14,6 @@ Rails.application.routes.draw do
     resources :places
   end
 
-  # DELETE BELOW ONCE LOGIN WORKS
-
-  # get '/sign_in', to: 'users#sign_in'
-  # post '/sign_in', to: 'users#sign_in!'
-  # get '/sign_up', to: 'users#sign_up'
-  # post '/sign_up', to: 'users#sign_up!'
-  # get '/sign_out', to: 'users#sign_out'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -2,10 +2,9 @@
 <main>
   <% @places.each do |place| %>
     <!-- build the list element for each place -->
+
     <div class="child">
-      <a href=<%= current_user %>"/places/<%= place.id %>">
-				<h3><%= place.location %></h3>
-      </a>
+    <h3><%= link_to "#{place.location}", user_place_path(place.user.id, place.id) %></h3>
         <%= image_tag(place.photo_url, class: "preview_img") %>
         <p><%= place.note %></p>
     </div>

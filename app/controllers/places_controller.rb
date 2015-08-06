@@ -34,13 +34,15 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
     @place.update(place_params)
 
-    redirect_to place_path(@place)
+    redirect_to user_place_path(place_params)
   end
 
   # destroy
   def destroy
     @place = Place.find(params[:id])
     @place.destroy
+
+    redirect_to user_places_path()
   end
 
   private

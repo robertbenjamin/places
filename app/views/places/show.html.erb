@@ -1,5 +1,5 @@
-<h2><%= @place.location %> <%= link_to "(edit)", edit_post_path(@post) %></h2>
+<h2><%= @place.location %> <%= link_to "(edit)", edit_user_place_path(@place.user.id, @place.id) %></h2>
 
 <%= image_tag(@place.photo_url) %>
 
-<p><%= @post.note %></p>
+<p><%= @place.note %></p>
