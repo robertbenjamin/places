@@ -31,9 +31,13 @@
   
 </nav>
 
-<div class="notice"><%= flash[:notice] %></div>
+<div class="container">
 
-<%= yield %>
+  <div class="notice"><%= flash[:notice] %></div>
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>

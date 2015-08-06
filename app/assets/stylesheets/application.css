@@ -65,20 +65,31 @@ body {
 	font-family: "Work Sans";
 	font-size: 20px;
 	line-height: 1.4em;
-	margin: 25px;
 }
 
 body > * {
 	padding: 10px;
 }
 
+.container {
+	padding: 20px;
+	background-color: #F3F3F3;
+}
+
 nav {
+	margin: 0;
 	font-size: 1.5em;
 	font-weight: 600;
+	background: url("https://unsplash.it/1600/300?image=587") no-repeat bottom center;
+}
+
+nav * {
+	color: white;
 }
 
 ul {
 	display: inline;
+	margin-left: 15px;
 }
 
 li {
@@ -88,6 +99,10 @@ li {
 
 a {
 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 .login-info {
@@ -102,16 +117,37 @@ main {
 }
 
 .child {
-	width: 400px;
-	padding: 20px;
-	margin: auto;
+	width: 350px;
+	margin: 20px;
+	max-height: 100%;
+	background-color: white;
+	position: relative;
+}
+
+.child > h3 {
+	/*padding: 5px 0;*/
+	position: absolute;
+	top: 0;
+	text-align: center;
+}
+
+.child > p {
+	margin: 5px 20px 10px 20px;
 }
 
 h3 {
 	margin: auto;
 	text-align: center;
+	width: 350px;
+	background-color: black;
+	opacity: 0.5;
+	padding: 10px 0;
+}
+
+h3 a {
+	color: white;
 }
 
 .preview_img {
-	max-width: 400px;
+	max-width: 100%;
 }
