@@ -1,0 +1,4 @@
+<%= form_tag new_user_place_path(current_user), method: :get do %>
+  <%= text_field_tag :place, placeholder: "Enter a location"  %>
+  <%= submit_tag :submit %>
+<% end %>
