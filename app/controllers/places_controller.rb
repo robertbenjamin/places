@@ -16,7 +16,16 @@ class PlacesController < ApplicationController
 
   # new
   def new
-    @place = Place.new
+    if params[:place].nil?
+      render :prelim
+      return
+    end
+    place = params[:place]
+    @place = Place.new(location: place.capitalize)
+    suckr = ImageSuckr::GoogleSuckr.new
+    @image_urls = [ suckr.get_image_url({"q" => place, "imgsz" => "large", "as_sitesearch" => "reddit.com"}),
+                    suckr.get_image_url({"q" => place, "imgsz" => "large", "as_sitesearch" => "reddit.com"}),
+                    suckr.get_image_url({"q" => place, "imgsz" => "large", "as_sitesearch" => "reddit.com"}) ]
   end
 
   # create

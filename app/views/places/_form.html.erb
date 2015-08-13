@@ -8,12 +8,12 @@
       to the controller or helper methods
   -->
 
-	<% suckr = ImageSuckr::GoogleSuckr.new %>
+	<%  %>
 
 	<div class="img_picker">
-		<option data-img-src="<%= suckr.get_image_url({"q" => "Piran", "imgsz" => "large", "as_sitesearch" => "reddit.com"}) %>" value="1" class="picked_img">Picture 1</option>
-		<option data-img-src="<%= suckr.get_image_url({"q" => "Piran", "imgsz" => "large", "as_sitesearch" => "flickr.com"}) %>" value="2" class="picked_img">Picture 2</option>
-		<option data-img-src="<%= suckr.get_image_url({"q" => "Piran", "imgsz" => "large", "as_sitesearch" => "flickr.com"}) %>" value="3" class="picked_img">Picture 3</option>
+    <% @image_urls.each_with_index do |image_url, index| %>
+		  <option data-img-src="<%= image_url %>" value="<%= index %>" class="picked_img"><%= "Picture #{index}" %></option>
+    <% end %>
 	</div>
 
   <button type="button" class="img_button">Add Image!</button>
