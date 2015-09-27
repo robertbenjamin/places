@@ -201,6 +201,12 @@ input[type="submit"] {
 	text-decoration: none;
 }
 
+/* For Landing Page */
+
+.important {
+  color: red;
+}
+
 /* For Smaller Screens */
 
 @media (max-width: 880px) {
