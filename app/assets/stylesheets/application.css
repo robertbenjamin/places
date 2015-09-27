@@ -207,10 +207,12 @@ input[type="submit"] {
   nav {
     text-align: center;
   }
+
   .login-info {
     float: none;
     clear: both;
   }
+  
   input {
     width: 90%;
   }
