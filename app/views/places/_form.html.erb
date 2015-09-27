@@ -3,16 +3,6 @@
   <%= f.label :location %>
   <%= f.text_field :location %>
 
-	<% suckr = ImageSuckr::GoogleSuckr.new %>
-
-	<div class="img_picker">
-		<option data-img-src="<%= suckr.get_image_url({"q" => "Paris", "imgsz" => "large", "as_sitesearch" => "reddit.com"}) %>" value="1" class="picked_img">Picture 1</option>
-		<option data-img-src="<%= suckr.get_image_url({"q" => "Paris", "imgsz" => "large", "as_sitesearch" => "flickr.com"}) %>" value="2" class="picked_img">Picture 2</option>
-		<option data-img-src="<%= suckr.get_image_url({"q" => "Paris", "imgsz" => "large", "as_sitesearch" => "flickr.com"}) %>" value="3" class="picked_img">Picture 3</option>
-	</div>
-	
-  <button type="button" class="img_button">Add Image!</button>
-
   <%= f.label :photo_url %>
   <%= f.text_field :photo_url %>
 
@@ -22,18 +12,3 @@
   <%= f.submit %>
 
 <% end %>
-
-<script>
-// Options for the image picker
-$(".img_picker").imagepicker({
-    show_label  : false
-});
-
-// Event listener for the image picker button
-$(".img_button").click(function () {
-	place = $("#place_location").val();
-	// alert( $(".selected > img").attr('src') );
-	img = $(".selected > img").attr('src');
-	$("#place_photo_url").val(img);
-})
-</script>

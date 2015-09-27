@@ -1,6 +1,5 @@
 <main>
   <% @places.each do |place| %>
-    <!-- build the list element for each place -->
 
     <div class="child">
     <h3><%= link_to "#{place.location}", user_place_path(place.user.id, place.id) %></h3>

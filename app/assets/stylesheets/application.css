@@ -83,6 +83,7 @@ h2 {
 
 nav {
 	margin: 0;
+  width: 100%;
 	font-size: 1.5em;
 	font-weight: 600;
 	background: url("https://unsplash.it/1600/300?image=682") no-repeat bottom center;
@@ -111,14 +112,15 @@ a:hover {
 }
 
 .login-info {
+  display: inline-block;
 	float: right;
 	padding: 15px;
 }
 
 .landing_img {
 	display: block;
-	max-width: 55%;
-	margin: 25px auto;
+	max-width: 50%;
+	margin: 35px auto;
 }
 
 main {
@@ -176,25 +178,6 @@ h4 {
 	margin: auto;
 }
 
-.image_picker_selector {
-	max-width: 1100px;
-	margin: 30px auto;
-	display: inline-table;
-	text-align: center;
-}
-
-.image_picker_selector > li {
-	/*margin: auto;*/
-	/*text-align: center;*/
-	/*display: inline;*/
-}
-
-.image_picker_image {
-	max-width: 250px;
-	margin: auto;
-	text-align: center;
-}
-
 p {
 	max-width: 650px;
 	margin: 15px auto;
@@ -216,4 +199,19 @@ input[type="submit"] {
 	width: 200px;
 	height: 30px;
 	text-decoration: none;
+}
+
+/* For Smaller Screens */
+
+@media (max-width: 880px) {
+  nav {
+    text-align: center;
+  }
+  .login-info {
+    float: none;
+    clear: both;
+  }
+  input {
+    width: 90%;
+  }
 }
