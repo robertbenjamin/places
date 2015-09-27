@@ -4,6 +4,8 @@ A Ruby on Rails app!
 
 ## Mockups
 
+Initial early, early mockups. The actual app looks much better. (Check out the link above!)
+
 ![The locations picker.](http://i.imgur.com/gO8nzsp.png)
 
 ![The personal locations directory.](http://i.imgur.com/d44JMaN.jpg)
@@ -21,7 +23,8 @@ A Ruby on Rails app!
 - username
 - password
 
-user :has_many
+user :has_many places
+place :belongs_to user
 
 **Locations**
 - title
